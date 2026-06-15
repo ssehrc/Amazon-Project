@@ -7,10 +7,11 @@ Contents:
     - backend: in-memory database
         - products.json: the products of the amazon store database. (in-memory)
     - data:
-        - products.js: the products of the amazon store.
+        - products.js: the products of the amazon store. The database of objects
     - images: pictures for the visuals of the website
     - style: css files
     - scripts: js files
+        - amazon.js: Loops the products through from products.js
 2. HTML Files:
     - amazon.html
     - checkout.html - checkout page
