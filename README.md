@@ -10,6 +10,7 @@ Contents:
         - products.js: the products of the amazon store.
     - images: pictures for the visuals of the website
     - style: css files
+    - scripts: js files
 2. HTML Files:
     - amazon.html
     - checkout.html - checkout page
