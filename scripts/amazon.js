@@ -1,5 +1,4 @@
 
-
 let productsHTML = '';
 
 //forEach loop takes the object, saves it in product, then runs it in function.
@@ -45,11 +44,12 @@ products.forEach((product) => {
           <div class="product-spacer"></div>
 
           <div class="added-to-cart">
-            <img src="images/icons/checkmark.png">
+            <img src="images/icons/checkmark.png"
+            data-product-name="${product.name}">
             Added
           </div>
 
-          <button class="add-to-cart-button button-primary">
+          <button class="add-to-cart-button button-primary js-add-to-cart">
             Add to Cart
           </button>
         </div>
@@ -59,3 +59,27 @@ products.forEach((product) => {
 console.log(productsHTML);
 
 document.querySelector('.js-products-grid').innerHTML = productsHTML;
+
+document.querySelectorAll('.js-add-to-cart').forEach((button) => {
+    button.addEventListener('click', () => {
+        //data attribute
+        const productName = button.dataset.productName;
+        let matchingItem;
+        cart.forEach((item) => {
+            if(productName === item.productName){
+                matchingItem = item;
+            }
+        });
+
+        if(matchingItem){
+            matchingItem.quantity += 1;
+        }else{
+            cart.push({
+                productName: productName,
+                quantity: 1
+            });
+        }
+        
+        console.log(cart);
+    });
+});
