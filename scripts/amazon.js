@@ -1,7 +1,13 @@
+//getting a variable out of a file
+//1. Add type="module" attribute ->amazon.html
+//2. Export ->cart.js
+//3. Import 
+//for modules to work it needs live server, for this course
+import {cart} from '../data/cart.js';
 
 let productsHTML = '';
 
-//forEach loop takes the object, saves it in product, then runs it in function.
+//forEach loop takes the object, saves it in product, then runs it in the function.
 products.forEach((product) => {
     productsHTML += `
         <div class="product-container">
