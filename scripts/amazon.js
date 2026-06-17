@@ -4,6 +4,7 @@
 //3. Import 
 //for modules to work it needs live server, for this course
 import {cart} from '../data/cart.js';
+import {products} from '../data/products.js';
 
 let productsHTML = '';
 
