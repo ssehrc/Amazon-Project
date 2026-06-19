@@ -67,6 +67,7 @@ console.log(productsHTML);
 
 document.querySelector('.js-products-grid').innerHTML = productsHTML;
 
+//updates webpages cart quantity
 function updateCartQuantity(){
   let cartQuantity = 0;
   cart.forEach((cartItem) => {
@@ -75,6 +76,7 @@ function updateCartQuantity(){
        
   document.querySelector('.js-cart-quantity').innerHTML = cartQuantity;
 }
+//function will add a 'Added' message when use adds item to cart
 function addedMessage(productId){
   let addedMessageTimeoutId;
   const addedMessage = document.querySelector(`.js-added-to-cart-${productId}`);
