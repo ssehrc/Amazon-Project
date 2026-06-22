@@ -3,7 +3,7 @@
 //2. Export ->cart.js
 //3. Import 
 //for modules to work it needs live server, for this course
-import {cart, addToCart} from '../data/cart.js';
+import {cart, addToCart, calculateCartQuantity} from '../data/cart.js';
 import {products} from '../data/products.js';
 import { formatCurrency } from './utils/money.js';
 
